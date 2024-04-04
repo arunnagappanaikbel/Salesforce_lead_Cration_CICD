@@ -1,0 +1,92 @@
+{
+  "name": "Salesforce_UseCase_POC",
+  "projectId": "ea08b7f8-3409-46e3-978b-fc7714568db6",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.CiscoWebexTeams.IntegrationService.Activities": "[4.0.4]",
+    "UiPath.Database.Activities": "[1.7.1]",
+    "UiPath.Excel.Activities": "[2.17.0-preview]",
+    "UiPath.Mail.Activities": "[1.18.2]",
+    "UiPath.Salesforce.Activities": "[1.9.2]",
+    "UiPath.Snowflake.IntegrationService.Activities": "[5.0.1]",
+    "UiPath.System.Activities": "[22.10.4]",
+    "UiPath.Testing.Activities": "[22.12.0-preview]",
+    "UiPath.UIAutomation.Activities": "[22.10.4]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.12.0.0",
+  "projectVersion": "1.0.165745643",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "33adea37-28b8-415a-b00d-ff63b509e56d",
+        "testCaseType": "TestCase",
+        "fileName": "SalesForceLoginFlow_test.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "5c6d7236-aae6-479f-a662-9c71296a75ea",
+        "testCaseType": "TestCase",
+        "fileName": "SalesForceAddLeads_test.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "f0c48991-6d52-461a-9f83-f975b1ca44d9",
+        "testCaseType": "TestCase",
+        "fileName": "SalesForceAddLeads_test1.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "12a472c9-9719-4f07-8733-0c1c6242990a",
+        "testCaseType": "TestCase",
+        "fileName": "Validation_test.xaml"
+      }
+    ],
+    "modernBehavior": false,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "64bff0a0-2ab3-4d62-8355-359c74860ade",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
