@@ -35,11 +35,16 @@ pipeline {
       steps {
         echo "Building..with ${WORKSPACE}"
         UiPathPack(
-          //outputPath: "Output\\${env.BUILD_NUMBER}",
-	  outputPath: "C:\\Users\\arnaik2\\OneDrive - Cisco\\Desktop\\UiPath\\Salesforce_UseCase_POC\\${env.BUILD_NUMBER}",
+            //outputPath: "Output\\${env.BUILD_NUMBER}",
+	  outputPath: "C:\\Users\\arnaik2\\OneDrive - Cisco\\Desktop\\UiPath\\Salesforce_UseCase_POC\\Build CICD\\${env.BUILD_NUMBER}",
           projectJsonPath: "C:\\Users\\arnaik2\\OneDrive - Cisco\\Desktop\\UiPath\\Salesforce_UseCase_POC\\project.json",
           version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
-          traceLevel: 'None'
+	  useOrchestrator: false,
+          orchestratorAddress: "https://cloud.uipath.com/enquewuxwbew/MyTenant/orchestrator_/",
+          orchestratorTenant: "MyTenant	",
+          //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: “APIUserKey”],
+          credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
+          traceLevel: 'None
         )
       }
     }
