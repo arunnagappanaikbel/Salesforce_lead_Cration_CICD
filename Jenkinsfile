@@ -44,7 +44,7 @@ pipeline {
           orchestratorTenant: "MyTenant	",
           //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: “APIUserKey”],
           credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
-          traceLevel: 'None
+          traceLevel: 'None'
         )
       }
     }
