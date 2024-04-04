@@ -36,7 +36,7 @@ pipeline {
         echo "Building..with ${WORKSPACE}"
         UiPathPack(
           //outputPath: "Output\\${env.BUILD_NUMBER}",
-	  outputPath: "C:\\Users\\arnaik2\\OneDrive - Cisco\\Documents\\UiPath\\Salesforce_POC_Relanto\\Output\\${env.BUILD_NUMBER}",
+	  outputPath: "C:\\Users\\arnaik2\\OneDrive - Cisco\\Desktop\\UiPath\\Salesforce_UseCase_POC\\Build CICD\\${env.BUILD_NUMBER}",
           projectJsonPath: "project.json",
           version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
 	  useOrchestrator: false,
@@ -54,7 +54,7 @@ stage('Deploy to UAT') {
         echo "Deploying ${BRANCH_NAME} to UAT "
         UiPathDeploy(
           //packagePath: "Output\\${env.BUILD_NUMBER}",
-	  packagePath: "C:\\Users\\arnaik2\\OneDrive - Cisco\\Documents\\UiPath\\Salesforce_POC_Relanto\\Output\\${env.BUILD_NUMBER}",
+	  packagePath: "C:\\Users\\arnaik2\\OneDrive - Cisco\\Desktop\\UiPath\\Salesforce_UseCase_POC\\Build CICD\\${env.BUILD_NUMBER}",
           orchestratorAddress: "${UIPATH_ORCH_URL}",
           orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
           folderName: "${UIPATH_ORCH_FOLDER_NAME}",
